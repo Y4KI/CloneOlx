@@ -1,41 +1,41 @@
-.category>div{
-    padding: 10px;
+.category > div {
+  padding: 10px;
 }
 .products {
-    width: 216px;
-    height: 162px;
-    object-fit: cover;
+  width: 216px;
+  height: 162px;
+  object-fit: cover;
 }
 .category-content {
-    position: relative;
+  position: relative;
 }
 .category_right-side {
-    padding: 10px;
+  padding: 10px;
 }
 .category_right-side div {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .location {
-    position: relative;
-    bottom: 0;
+  position: relative;
+  bottom: 0;
 }
 .category-title {
-    width: 100%;
-    min-height: 110px;
+  width: 100%;
+  min-height: 110px;
 }
 .category-title:first-child {
-    font-size: 19px;
+  font-size: 19px;
 }
 .category_right-side span {
-    font-size: 12px;
+  font-size: 12px;
 }
 .fright {
-    background-color: rgb(238, 234, 228);
+  background-color: rgb(238, 234, 228);
 }
 @media (min-width: 768px) {
-    .fright {
-        position: absolute;
-        top: 20px;
-        right: 10px;
-    }
+  .fright {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
 }

@@ -1,6 +1,6 @@
 const colors = {
-    light: "aliceblue",
-    dark: "indigo"
-}
+  light: "aliceblue",
+  dark: "indigo",
+};
 
-export default colors
+export default colors;
