@@ -4,7 +4,7 @@ import "./SearchBox.css"
 
 function SearchBox() {
     return (
-        <div className="SearchBox-wrapper mb-5">
+        <div className="SearchBox-wrapper">
             <div className="SearchBox container py-5">
                 <form className="row">
                     <input type="text" placeholder="Поиск..." className="col-6 col-md-7 py-3"/>

@@ -26,9 +26,6 @@ const FooterWrapper = styled.footer`
         margin: 10px 0 0;
         text-align: center;
     }
-    .footer-download-links {
-        margin-left: 60px;
-    }
 `
 
 export default FooterWrapper

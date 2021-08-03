@@ -7,18 +7,16 @@ import { useParams } from 'react-router-dom'
 function Category() {
     const { category } = useParams()
     const data = datas.filter(i => i.category === category)[0].data
-    console.log(data);
+
     return (
         <Container>
             <div className="category container">
-                <h1>Category: <b>{category}</b></h1>
-                {data.map((i,index) => <div className="col-12 d-flex shadow my-3 row" key={index}>
-                    <img src={i.img} alt="pics" className="col-3"/>
-                    <div className="category_right-side col-9">
-                        <div className="d-flex justify-content-between">
-                            <div className="img_box"></div>
-                            <p>{i.title}</p>
-                            <p>{i.price}</p>
+                {data.map((i,index) => <div className="col-12 d-flex shadow my-3 category-content" key={index}>
+                    <img className="products" src={i.img} alt="pics"/>
+                    <div className="category_right-side">
+                        <div className="d-flex category-title">
+                            <p className="category-title__title">{i.title}</p>
+                            <p className="fright">{i.price}</p>
                         </div>
                         <span className="location">{i.location}</span>
                     </div>

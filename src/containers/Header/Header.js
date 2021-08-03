@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ThemeContext from '../../ThemeContext'
 import HeaderWrapper from './HeaderWrapper'
@@ -10,10 +10,23 @@ const link = [
 
 const Header = () => {
     const {theme, toggleTheme} = useContext(ThemeContext)
+    
+    const [navbar, setnavbar] = useState(false)
 
-    return <HeaderWrapper className={theme === "light" ? "light" : "dark"}>
+    const changeNavbar = () => {
+        if(window.scrollY > 2000) {
+            setnavbar(true)
+        }
+        else{
+            setnavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeNavbar)
+
+    return <HeaderWrapper className={`${navbar ? "absolute" : "fixed-top"} ${theme === "light" ? "light" : "dark"}`}>
         <div className="header container d-flex justify-content-between align-items-center">
-            <ul className="d-flex header__ul py-3">
+            <ul className="d-flex header__ul">
                 {link.map((i,index) => 
                 <li key={index} className="header__li  py-2 rounded"><Link className="btn text-white" to={i.to}>{i.title}</Link></li>
                 )}

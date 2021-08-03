@@ -4,12 +4,38 @@ const PremiumWrapper = styled.div`
     background-color: #f2f4f5;
     width: 100%;
     padding: 0 0 100px;
-    .premium {
+    @media (min-width: 1260px) {
         .premium-content {
             display: grid;
             grid-template-columns: auto auto auto auto;
             grid-gap: 15px;
-            .premium-content__box {
+            }
+    }
+    @media (max-width: 1260px) and (min-width: 1020px){
+        .premium {
+            .premium-content {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: 15px;
+            }
+        }
+    }
+    @media (max-width: 1020px) and (min-width: 770px){
+            .premium-content {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 15px;
+            }
+    }
+    @media (max-width: 770px) {
+            .premium-content {
+                display: grid;
+                grid-template-columns: auto;
+                grid-gap: 15px;
+            }
+    }
+
+  .premium-content__box {
                 background-color: #fff;
                 padding: 15px;
                 h4 {
@@ -32,8 +58,6 @@ const PremiumWrapper = styled.div`
                     }
                 }
             }
-        }
-    }
 `
 
 export default PremiumWrapper

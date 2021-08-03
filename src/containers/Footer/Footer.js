@@ -26,8 +26,8 @@ function Footer() {
                             {FooterMenu['mid'].map((i,index) => <li key={index} className="my-2"><Link to={i.to} className="text-white">{i.title}</Link></li>)}
                         </ul>
                         <ul className="col-4">
-                            <div className="footer-download-links">
-                               {FooterMenu['right'].map((i,index) => <Link onMouseLeave={() => {setdownload('Бесплатное приложение для твоего телефона')}} onMouseOver={() => {setdownload(i.state)}} to={i.to} key={index}><img src={i.icon} alt="Link" /></Link>)}
+                            <div className="footer-download-links ms-md-4">
+                               {FooterMenu['right'].map((i,index) => <a className="my-2" onMouseLeave={() => {setdownload('Бесплатное приложение для твоего телефона')}} onMouseOver={() => {setdownload(i.state)}} href={i.to} key={index}><img src={i.icon} alt="Link" /></a>)}
                             </div>
                             <p>{download}</p>
                         </ul>

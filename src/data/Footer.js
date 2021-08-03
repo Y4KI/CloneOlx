@@ -15,8 +15,8 @@ const FooterMenu = {
     {to: "/about", title: 'Карьера в OLX'},
     {to: "/about", title: 'Обратная связь'}],
     'right': [{icon: "https://static.olx.uz/static/olxuz/packed/font/2fc9f37e6707acfc0e1255cec57c49a986.svg",
-to: "/about", state: "скачать Google Play"},{icon: "https://static.olx.uz/static/olxuz/packed/font/2fccd2faa9395d5faed1011516c64dc929.svg",
-to: "/about", state: "скачать App Store"}]
+to: "https://play.google.com/store/apps/details?id=com.torg.torg", state: "скачать Google Play"},{icon: "https://static.olx.uz/static/olxuz/packed/font/2fccd2faa9395d5faed1011516c64dc929.svg",
+to: "https://itunes.apple.com/uz/app/torg.uz/id665094472?mt=8&ign-mpt=uo%3D4", state: "скачать App Store"}]
 }
 
 export default FooterMenu

@@ -3,6 +3,9 @@ import colors from "../../data/colors"
 
 const HeaderWrapper = styled.header`
     transition: 1s;
+    &.absolute {
+        position: absolute;
+    }
     &.light {
         background-color: ${colors.light};
         a {
