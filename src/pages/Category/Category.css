@@ -1,0 +1,17 @@
+.category>div{
+    padding: 10px;
+}
+.category img {
+    max-width: 200px;
+    max-height: 200px;
+}
+.category_right-side {
+    padding: 10px;
+}
+.category_right-side div {
+    justify-content: space-between;
+}
+.location {
+    position: relative;
+    bottom: 0;
+}

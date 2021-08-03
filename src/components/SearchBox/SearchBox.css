@@ -1,0 +1,24 @@
+.SearchBox-wrapper {
+    background-color: #f2f4f5;
+}
+.SearchBox form {
+    width: 100%;
+}
+.SearchBox form button {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.SearchBox div {
+    position: relative;
+}
+.SearchBox div button {
+    background-color: #fff;
+    position: absolute;
+    border: none;
+}
+.SearchBox input {
+    border: none;
+    outline: none;
+}
