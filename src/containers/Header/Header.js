@@ -14,7 +14,7 @@ const Header = () => {
   const [navbar, setnavbar] = useState(false);
 
   const changeNavbar = () => {
-    if (window.scrollY > 1000) {
+    if (window.scrollY > 1500) {
       setnavbar(true);
     } else {
       setnavbar(false);
