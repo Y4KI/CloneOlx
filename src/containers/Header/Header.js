@@ -14,7 +14,7 @@ const Header = () => {
   const [navbar, setnavbar] = useState(false);
 
   const changeNavbar = () => {
-    if (window.scrollY > 2000) {
+    if (window.scrollY > 1000) {
       setnavbar(true);
     } else {
       setnavbar(false);
@@ -25,9 +25,10 @@ const Header = () => {
 
   return (
     <HeaderWrapper
-      className={`${navbar ? "absolute" : "fixed-top"} ${
-        theme === "light" ? "light" : "dark"
-      }`}
+      className={`
+        ${navbar ? "active fixed-top" : "fixed-top"} 
+        ${theme === "light" ? "light" : "dark"}
+      `}
     >
       <div className="header container d-flex justify-content-between align-items-center">
         <ul className="d-flex header__ul">
