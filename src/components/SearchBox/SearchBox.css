@@ -4,22 +4,20 @@
 }
 .SearchBox form {
   width: 100%;
+  position: relative;
+  height: 50px;
 }
 .SearchBox form button {
-  position: relative;
+  border: none;
+  border-left: 1px solid grey;
+  background-color: #fff;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
 }
-.SearchBox div {
-  position: relative;
-}
-.SearchBox div button {
-  background-color: #fff;
-  position: absolute;
-  border: none;
-}
 .SearchBox input {
   border: none;
+  border-right: 1px solid grey;
   outline: none;
 }

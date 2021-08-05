@@ -19,7 +19,7 @@ function Footer() {
         </div>
         <div className="footer-content">
           <div className="footer-content__list row">
-            <ul className="col-4">
+            <ul className="col-12 col-sm-6 col-md-4 px-3 py-0 my-0">
               {FooterMenu["left"].map((i, index) => (
                 <li key={index} className="my-2">
                   <Link to={i.to} className="text-white">
@@ -28,7 +28,7 @@ function Footer() {
                 </li>
               ))}
             </ul>
-            <ul className="col-4">
+            <ul className="col-12 col-sm-6 col-md-4 px-3 py-0 my-0">
               {FooterMenu["mid"].map((i, index) => (
                 <li key={index} className="my-2">
                   <Link to={i.to} className="text-white">
@@ -37,7 +37,7 @@ function Footer() {
                 </li>
               ))}
             </ul>
-            <ul className="col-4">
+            <ul className="col-12 col-sm-6 col-md-4 px-3 py-0 my-0">
               <div className="footer-download-links ms-md-4">
                 {FooterMenu["right"].map((i, index) => (
                   <a

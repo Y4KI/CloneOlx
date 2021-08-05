@@ -30,18 +30,22 @@ const Header = () => {
         ${theme === "light" ? "light" : "dark"}
       `}
     >
-      <div className="header container d-flex justify-content-between align-items-center">
-        <ul className="d-flex header__ul">
+      <div className="header container d-flex justify-content-between align-items-center p-0">
+        <ul className="py-3 px-md-0 px-2 my-0">
           {link.map((i, index) => (
-            <li key={index} className="header__li  py-2 rounded">
-              <Link className="btn text-white" to={i.to}>
+            <li key={index} className="d-inline pe-4 mx-0">
+              <Link className="btn px-0 mx-0 text-white" to={i.to}>
                 {i.title}
               </Link>
             </li>
           ))}
         </ul>
         <button
-          className={`${theme === "light" ? "btn-dark" : "btn-primary"} btn`}
+          className={`${
+            theme === "light"
+              ? "btn-dark me-2 me-md-0"
+              : "btn-primary me-2 me-md-0"
+          } btn`}
           onClick={toggleTheme}
         >
           {theme === "light" ? "Night" : "Day"}

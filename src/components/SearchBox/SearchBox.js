@@ -5,23 +5,21 @@ import "./SearchBox.css";
 function SearchBox() {
   return (
     <div className="SearchBox-wrapper">
-      <div className="SearchBox container py-5">
-        <form className="row">
+      <div className="SearchBox container py-5 p-0">
+        <form className="row px-4 px-md-0">
           <input
             type="text"
             placeholder="Поиск..."
-            className="col-6 col-md-7 py-3"
+            className="col-4 col-sm-6"
           />
-          <div className="col-6 col-md-5 row">
-            <input
-              type="text"
-              placeholder="Весь Узбекистан"
-              className="col-12"
-            />
-            <button className="col-6 col-md-4">
-              Найти <BsSearch />
-            </button>
-          </div>
+          <input
+            type="text"
+            placeholder="Весь Узбекистан"
+            className="col-8 col-sm-6"
+          />
+          <button className="col-4 col-sm-2">
+            Найти <BsSearch />
+          </button>
         </form>
       </div>
     </div>

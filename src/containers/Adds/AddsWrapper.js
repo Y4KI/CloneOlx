@@ -39,6 +39,13 @@ const AddsWrapper = styled.div`
       }
     }
   }
+  .Add-icon {
+    width: 120px;
+    height: 120px;
+  }
+  .Add-btn {
+    width: 180px;
+  }
 `;
 
 export default AddsWrapper;

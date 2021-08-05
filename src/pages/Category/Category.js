@@ -2,14 +2,17 @@ import React from "react";
 import Container from "../../containers/container";
 import "./Category.css";
 import datas from "../../data/data";
-import { useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 
 function Category() {
   const { category } = useParams();
-  const data = datas.filter((i) => i.category === category)[0].data;
+
+  const filteredData = datas.filter((i) => i.category === category);
+  const data = filteredData.length > 0 ? filteredData[0].data : [];
 
   return (
     <Container>
+      {data.length === 0 && <Redirect to="/page404" />}
       <div className="category container">
         {data.map((i, index) => (
           <div

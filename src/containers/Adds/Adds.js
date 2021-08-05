@@ -5,13 +5,20 @@ function Adds() {
   return (
     <AddsWrapper>
       <div className="Add">
-        <div className="add-content container d-flex justify-content-around align-items-center">
-          <img
-            src="https://static.olx.uz/static/olxuz/packed/font/2fbd23c39bff0aee6c0c84aaf60e66347d.svg"
-            alt="static"
-          />
-          <h1>Начните бизнес в интернете с OLX!</h1>
-          <button>Подробнее</button>
+        <div className="container">
+          <div className="add-content row d-flex justify-content-around align-items-center">
+            <img
+              src="https://static.olx.uz/static/olxuz/packed/font/2fbd23c39bff0aee6c0c84aaf60e66347d.svg"
+              alt="static"
+              className="col-12 col-sm-6 col-md-4 Add-icon"
+            />
+            <h1 className="col-12 col-sm-6 col-md-4 text-center my-3 mb-5">
+              Начните бизнес в интернете с OLX!
+            </h1>
+            <button className="col-12 col-sm-6 col-md-4 Add-btn">
+              Подробнее
+            </button>
+          </div>
         </div>
       </div>
       <div className="infoadd d-flex justify-content-center">
