@@ -4,5 +4,10 @@ const changeInput = (obj) => {
     payload: obj,
   };
 };
-
-export { changeInput };
+const likeIt = (obj) => {
+  return {
+    type: "LIKE_IT",
+    payload: obj,
+  };
+};
+export { changeInput, likeIt };

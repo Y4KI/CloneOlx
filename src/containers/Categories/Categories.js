@@ -8,12 +8,16 @@ function Categories() {
     <div className="category mt-5">
       <div className="text-center row">
         {category.map((i, index) => (
-          <Link to={i.to} key={index} className="col-3 col-sm-2 col-md-1">
+          <Link
+            to={i.to}
+            key={index}
+            className="col-4 col-sm-3 col-md-2 col-lg-1"
+          >
             <div className="category-box">
               <img
                 src={i.icon}
                 alt="pics"
-                className="category__icon w-100"
+                className="category__icon w-100 mb-md-2 mb-1"
                 style={{ backgroundColor: i.bgColor }}
               />
               <p>{i.title}</p>

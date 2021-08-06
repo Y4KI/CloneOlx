@@ -1,8 +1,20 @@
 import React from "react";
 import PremiumWrapper from "./PremiumWrapper";
-import premium from "../../data/PremiumCategory";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { likeIt } from "../../Redux/Actions";
 
 function Premium() {
+  const state = useSelector((state) => state);
+  const premium = state.premium;
+  const dispatch = useDispatch();
+
+  const likeit = (index) => {
+    premium[index].like = !premium[index].like;
+    let newPremium = { ...state, ...premium };
+    dispatch(likeIt(newPremium));
+  };
+
   return (
     <PremiumWrapper>
       <div className="premium container">
@@ -15,7 +27,14 @@ function Premium() {
               </div>
               <h4 className="my-2">{i.title}</h4>
               <p>{i.location}</p>
-              <p className="premium-content__price">{i.price}</p>
+              <div className="d-flex justify-content-between">
+                <span className="premium-content__price">
+                  {i.price === "" ? "договорная" : i.price}
+                </span>
+                <span className="text-danger" onClick={() => likeit(index)}>
+                  {i.like ? <AiFillHeart /> : <AiOutlineHeart />}
+                </span>
+              </div>
             </div>
           ))}
         </div>
