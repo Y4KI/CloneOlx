@@ -9,8 +9,8 @@ function Premium() {
         <h1 className="text-center py-5">Премиум объявления</h1>
         <div className="premium-content row">
           {premium.map((i, index) => (
-            <div key={index} className="premium-content__box">
-              <div className="premium-content__img w-50">
+            <div key={index} className="premium-content__box w-100">
+              <div className="premium-content__img d-flex justify-content-center">
                 <img src={i.img} alt="premium-content" />
               </div>
               <h4 className="my-2">{i.title}</h4>

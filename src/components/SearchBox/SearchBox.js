@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsSearch } from "react-icons/bs";
+import { useDispatch, useSelector } from "react-redux";
+import { changeInput } from "../../Redux/Actions";
 import "./SearchBox.css";
 
 function SearchBox() {
+  const Search = useSelector((state) => state.search);
+
+  const [inp, setinp] = useState("");
+
+  const dispatch = useDispatch();
+  const changeInpValue = (e) => {
+    setinp(e.target.value);
+    let newSearch = { ...Search, search: inp };
+
+    dispatch(changeInput(newSearch));
+  };
+
   return (
     <div className="SearchBox-wrapper">
       <div className="SearchBox container py-5 p-0">
@@ -11,6 +25,8 @@ function SearchBox() {
             type="text"
             placeholder="Поиск..."
             className="col-4 col-sm-6"
+            value={inp}
+            onChange={changeInpValue}
           />
           <input
             type="text"

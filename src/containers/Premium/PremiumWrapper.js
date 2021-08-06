@@ -33,6 +33,9 @@ const PremiumWrapper = styled.div`
       grid-template-columns: auto;
       grid-gap: 15px;
     }
+    .premium-content__box {
+      text-align: center;
+    }
   }
 
   .premium-content__box {

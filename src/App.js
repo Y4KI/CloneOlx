@@ -7,6 +7,7 @@ import Category from "./pages/Category";
 import ThemeContext from "./ThemeContext";
 import Page404 from "./pages/page404";
 import { useState } from "react";
+import { Provider } from "react-redux";
 
 let pages = [
   { path: "/", component: <Home />, exact: true },
@@ -25,17 +26,19 @@ function App() {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="app">
-        <Switch>
-          {pages.map((i) => (
-            <Route key={i} path={i.path} exact={i.exact}>
-              {i.component}
-            </Route>
-          ))}
-        </Switch>
-      </div>
-    </ThemeContext.Provider>
+    <Provider>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="app">
+          <Switch>
+            {pages.map((i) => (
+              <Route key={i} path={i.path} exact={i.exact}>
+                {i.component}
+              </Route>
+            ))}
+          </Switch>
+        </div>
+      </ThemeContext.Provider>
+    </Provider>
   );
 }
 
