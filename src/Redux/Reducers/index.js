@@ -1,5 +1,5 @@
 const initialState = {
-  search: "hello",
+  search: "",
 };
 
 const reducer = (state = initialState, action) => {

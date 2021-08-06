@@ -8,6 +8,7 @@ import ThemeContext from "./ThemeContext";
 import Page404 from "./pages/page404";
 import { useState } from "react";
 import { Provider } from "react-redux";
+import store from "./Redux/store";
 
 let pages = [
   { path: "/", component: <Home />, exact: true },
@@ -26,7 +27,7 @@ function App() {
   };
 
   return (
-    <Provider>
+    <Provider store={store}>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div className="app">
           <Switch>

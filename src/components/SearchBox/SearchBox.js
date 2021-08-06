@@ -5,15 +5,14 @@ import { changeInput } from "../../Redux/Actions";
 import "./SearchBox.css";
 
 function SearchBox() {
-  const Search = useSelector((state) => state.search);
+  const Search = useSelector((state) => state);
 
   const [inp, setinp] = useState("");
 
   const dispatch = useDispatch();
   const changeInpValue = (e) => {
     setinp(e.target.value);
-    let newSearch = { ...Search, search: inp };
-
+    let newSearch = { ...Search, search: e.target.value };
     dispatch(changeInput(newSearch));
   };
 
@@ -25,7 +24,7 @@ function SearchBox() {
             type="text"
             placeholder="Поиск..."
             className="col-4 col-sm-6"
-            value={inp}
+            value={Search.search}
             onChange={changeInpValue}
           />
           <input
